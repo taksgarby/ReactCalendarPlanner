@@ -8,7 +8,7 @@ export const EventModal = () => {
   const [title, setTitle] = useState(selectedEvent ? selectedEvent.title : "");
 
   const handleSubmit = (e) => {
-    // クリック時に送信するというdefaultの動作をキャンセルする
+    // cancel default method
     e.preventDefault();
     const calendarEvent = {
       title: title,

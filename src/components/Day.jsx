@@ -8,14 +8,14 @@ export const Day = (props) => {
   const { setDaySelected, setShowEventModal, savedEvents, setSelectedEvent } =
     useContext(GlobalContext);
 
-  // 今日の日付を色付けする
+  // highlight today
   const getCurrentDayClass = () => {
     return day.format("DD-MM-YY") === dayjs().format("DD-MM-YY")
       ? "bg-blue-600 text-white rounded-full w-7"
       : "";
   };
 
-  // 登録データを日付が一致する日に表示
+  // 
   useEffect(() => {
     const events = savedEvents.filter(
       (evt) => dayjs(evt.day).format("DD-MM-YY") === day.format("DD-MM-YY")
@@ -26,7 +26,7 @@ export const Day = (props) => {
   return (
     <div className="border border-gray-200 flex flex-col">
       <header className="flex flex-col items-center">
-        {/* 1行目に曜日を表示 */}
+        {/* Display day of the week on the first line */}
         {rowIdx === 0 && <p className="text-sm mt-1">{day.format("ddd")}</p>}
         <p className={`text-sm p-1 my-1 text-center" ${getCurrentDayClass()}`}>
           {day.format("DD")}
