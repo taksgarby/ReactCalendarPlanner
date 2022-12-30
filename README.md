@@ -16,3 +16,7 @@ $ npx tailwindcss init -p
 ### Installed "Day.js"
 
 $ npm install dayjs
+
+### Installed "react-icons"
+
+$ npm install react-icons --save

@@ -23,6 +23,7 @@ function App() {
         <div className="flex flex-1">
           <Sidebar />
           <Month month={currentMonth} />
+          <Sidebar />
         </div>
       </div>
     </>
